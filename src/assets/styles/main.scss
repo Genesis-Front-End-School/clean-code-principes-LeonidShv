@@ -1,0 +1,51 @@
+@import 'quasar/dist/quasar';
+@import '@quasar/extras/roboto-font/roboto-font';
+@import '@quasar/extras/material-icons/material-icons';
+
+@import '@/assets/styles/_colors.scss';
+@import '@/assets/styles/_reset.scss';
+@import '@/assets/styles/_modifier.scss';
+
+p,
+h1,
+h2,
+h3,
+li {
+  color: var(--light);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--deep-dark);
+}
+
+.input {
+  width: 200px;
+}
+
+// TODO: chat, name of message
+.q-message-name.q-message-name--sent,
+.q-message-name.q-message-name--received {
+  color: var(--grey);
+}
+
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --section-padding-block: 48px;
+}
