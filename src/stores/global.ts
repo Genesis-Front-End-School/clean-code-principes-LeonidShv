@@ -5,7 +5,7 @@ export const useGlobalStore = defineStore('global', {
     isDarkTheme: false,
     coursesLists: [],
     paginatedCoursesLists: [],
-    course: {},
+    course: {}
   }),
   getters: {},
   actions: {
@@ -13,17 +13,17 @@ export const useGlobalStore = defineStore('global', {
       this.isDarkTheme = !this.isDarkTheme
     },
     setCoursesLists(coursesLists: any) {
-      this.coursesLists = coursesLists;
+      this.coursesLists = coursesLists
 
-      localStorage.setItem("coursesLists", JSON.stringify(coursesLists));
+      localStorage.setItem('coursesLists', JSON.stringify(coursesLists))
     },
     setCourse(course: any) {
-      this.course = course;
+      this.course = course
 
-      localStorage.setItem(course.id, JSON.stringify(course));
+      localStorage.setItem(course.id, JSON.stringify(course))
     },
     setPaginatedCoursesLists(paginatedCoursesLists: any) {
-      this.paginatedCoursesLists = paginatedCoursesLists;
-    },
+      this.paginatedCoursesLists = paginatedCoursesLists
+    }
   }
 })

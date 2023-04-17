@@ -15,6 +15,7 @@
         color="white"
         text-color="black"
         label="Standard"
+        @click="showNotification"
       />
     </div>
 
@@ -100,15 +101,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// import { useQuasar } from 'quasar'
-// const $q = useQuasar()
+import { useQuasar } from 'quasar'
+const $q = useQuasar()
 
-// function showNotification () {
-//   $q.notify({
-//     message: 'Jim pinged you.',
-//     color: 'purple'
-//   })
-// }
+function showNotification () {
+  $q.notify({
+    message: 'Jim pinged you.',
+    color: 'purple'
+  })
+}
 
 const select = ref(null)
 const options = ['Google', 'Facebook', 'Twitter', 'Apple', 'Oracle']

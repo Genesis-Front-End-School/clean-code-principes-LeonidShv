@@ -1,7 +1,7 @@
 <template>
   <video
     @[mouseoverName]="turnOn"
-    @[mouseleaveName]="tyrnOff"
+    @[mouseleaveName]="turnOff"
     @pause="pause"
     @ended="pause"
     @keyup="changeSpeed"
@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits(['pause'])
 
-const video = ref()
+const video = ref(null)
 
 onMounted(() => {
   prepareVideoPlayer()
@@ -78,7 +78,7 @@ function turnOn(e: any) {
   e.target.play()
 }
 
-function tyrnOff(e: any) {
+function turnOff(e: any) {
   e.target.pause()
 }
 
@@ -90,9 +90,9 @@ function pause() {
 
 function changeSpeed(e: any) {
   if (e.key === 'w') {
-    video.value.playbackRate = video.value.playbackRate + 0.25;
+    video.value.playbackRate = video.value.playbackRate + 0.25
   } else if (e.key === 's') {
-    video.value.playbackRate = video.value.playbackRate - 0.25;
+    video.value.playbackRate = video.value.playbackRate - 0.25
   }
 }
 </script>

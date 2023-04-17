@@ -2,7 +2,7 @@
 @import '@quasar/extras/roboto-font/roboto-font';
 @import '@quasar/extras/material-icons/material-icons';
 
-@import '@/assets/styles/_colors.scss';
+@import '@/assets/styles/_variables.scss';
 @import '@/assets/styles/_reset.scss';
 @import '@/assets/styles/_modifier.scss';
 
@@ -42,10 +42,4 @@ body {
 .q-message-name.q-message-name--sent,
 .q-message-name.q-message-name--received {
   color: var(--grey);
-}
-
-:root {
-  --header-height: 60px;
-  --footer-height: 60px;
-  --section-padding-block: 48px;
 }
