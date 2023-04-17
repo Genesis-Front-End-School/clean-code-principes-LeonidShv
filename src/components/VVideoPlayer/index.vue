@@ -13,7 +13,7 @@
     title="Buttons W and S can change speed of your player"
   >
     <source
-      :src="link + '#t=50'"
+      :src="link"
       type="application/x-mpegURL"
     />
   </video>
